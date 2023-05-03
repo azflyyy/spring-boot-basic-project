@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
+  <link rel="stylesheet" href="Dashboard.css">
+  <!-- Boxicons CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="sidebar">
+  <div class="logo-details">
+    <i class='bx bxl-SCHOOL'></i>
+    <span class="logo_name">ADMIN</span>
+  </div>
+  <ul class="nav-links">
+    <li>
+      <a href="#" class="active">
+        <i class='bx bx-grid-alt' ></i>
+        <span class="links_name">Dashboard</span>
+      </a>
+    </li>
+    <li>
+      <a href="http://localhost:8080/Professeur/" >
+        <i class='bx bx-user' ></i>
+        <span class="links_name">Professeurs</span>
+      </a >
+    </li>
+    <li>
+      <a href="http://localhost:8080/Filliere/">
+        <i class='bx bx-book' ></i>
+        <span class="links_name">Fillières</span>
+      </a>
+    </li>
+    <li>
+      <a href="http://localhost:8080/element/">
+        <i class='bx bx-book' ></i>
+        <span class="links_name">Elements</span>
+      </a>
+    </li>
+    <li>
+      <a href="http://localhost:8080/modalite">
+        <i class='bx bx-check-circle' ></i>
+        <span class="links_name">Modalité</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class='bx bx-book-alt' ></i>
+        <span class="links_name">Comptes</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class='bx bx-message' ></i>
+        <span class="links_name">Affectation</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class='bx bx-cog' ></i>
+        <span class="links_name">Setting</span>
+      </a>
+    </li>
+    <li class="log_out">
+      <a href="#">
+        <i class='bx bx-log-out'></i>
+        <span class="links_name">Log out</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<section class="home-section">
+  <nav>
+    <div class="sidebar-button">
+      <i class='bx bx-menu sidebarBtn'></i>
+      <span class="dashboard">Dashboard</span>
+    </div>
+    <div class="search-box">
+      <input type="text" placeholder="Search...">
+      <i class='bx bx-search' ></i>
+    </div>
+    <div class="profile-details">
+      <!--<img src="images/profile.jpg" alt="">-->
+      <span class="admin_name">profil details</span>
+      <i class='bx bx-chevron-down' ></i>
+    </div>
+  </nav>
+
+  <div class="home-content">
+    <div class="overview-boxes">
+      <div class="box">
+        <div class="right-side">
+          <div class="box-topic">Comptes utilisateurs</div>
+          <div class="number">40</div>
+          <div class="indicator">
+            <i class='bx bx-down-arrow-alt'></i>
+            <span class="text">down from last year</span>
+          </div>
+        </div>
+        <i class='bx bx-'></i>
+      </div>
+      <div class="box">
+        <div class="right-side">
+          <div class="box-topic">Students</div>
+          <div class="number">38,876</div>
+          <div class="indicator">
+            <i class='bx bx-up-arrow-alt'></i>
+            <span class="text">Up from last year</span>
+          </div>
+        </div>
+        <i class='bx bxs-' ></i>
+      </div>
+      <div class="box">
+        <div class="right-side">
+          <div class="box-topic">Fillières</div>
+          <div class="number">5</div>
+          <div class="indicator">
+            <i class='bx bx-up-arrow-alt'></i>
+            <span class="text">Up from last two years</span>
+          </div>
+        </div>
+        <i class='bx bx-' ></i>
+      </div>
+      <div class="box">
+        <div class="right-side">
+          <div class="box-topic">Professeurs</div>
+          <div class="number">50</div>
+          <div class="indicator">
+            <i class='bx bx-up-arrow-alt'></i>
+            <span class="text">Up from last year</span>
+          </div>
+        </div>
+        <i class='bx bxs' ></i>
+      </div>
+    </div>
+
+
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".sidebarBtn");
+      sidebarBtn.onclick = function() {
+        sidebar.classList.toggle("active");
+        if(sidebar.classList.contains("active")){
+          sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+        }else
+          sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+      }
+    </script>
+
+</body>
+</html>
